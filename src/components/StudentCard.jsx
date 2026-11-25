@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function StudentCard({ student }) {
   return (
     <div className="student-card">
@@ -11,6 +13,10 @@ function StudentCard({ student }) {
       <span className={student.active ? "badge active" : "badge inactive"}>
         {student.active ? "פעילה" : "לא פעילה"}
       </span>
+
+      <Link to={`/students/${student.id}`} className="details-link">
+        לצפייה בפרטים
+      </Link>
     </div>
   );
 }

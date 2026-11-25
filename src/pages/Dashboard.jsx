@@ -1,9 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { students } from "../data/students";
-import Header from "./Header";
-import Statistics from "./Statistics";
-import StudentList from "./StudentList";
-
+import Statistics from "../components/Statistics";
+import StudentList from "../components/StudentList";
 function Dashboard() {
   const [showOnlyActive, setShowOnlyActive] = useState(false);
   const [search, setSearch] = useState("");
@@ -13,10 +11,12 @@ function Dashboard() {
     .filter((s) => (showOnlyActive ? s.active : true))
     .filter((s) => s.name.includes(search));
 
+    useEffect(() => {
+  console.log("הדשבורד נטען");
+}, []);
+
   return (
     <div className="dashboard">
-      <Header />
-
       <button onClick={() => setShowStats(!showStats)}>
         {showStats ? "הסתר סטטיסטיקה" : "הצג סטטיסטיקה"}
       </button>

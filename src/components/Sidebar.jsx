@@ -13,6 +13,9 @@ function Sidebar() {
         תלמידות מצטיינות
       </NavLink>
     </nav>
+    <NavLink to="/users" className={({ isActive }) => (isActive ? "active-link" : "")}>
+  משתמשים
+</NavLink>
   );
 }
 

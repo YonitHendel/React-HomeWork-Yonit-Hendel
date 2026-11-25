@@ -32,4 +32,4 @@ function StudentDetails() {
   );
 }
 
-export default studentDetails;
+export default StudentDetails;

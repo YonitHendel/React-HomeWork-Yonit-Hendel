@@ -1,53 +1,43 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   direction: rtl;
-  background: #fff;
-  color: #333;
   padding: 20px;
 }
 
 h1, h2 {
-  color: #c2185b;
+  color: #333;
 }
 
 button {
-  background: #f8bbd0;
-  border: 1px solid #c2185b;
-  padding: 5px 12px;
+  background: #facc15;
+  border: 1px solid #333;
+  padding: 5px 10px;
   margin-left: 5px;
-  cursor: pointer;
 }
 
-input {
-  padding: 5px;
-  border: 1px solid #ccc;
+.sidebar a {
+  margin-left: 15px;
+  color: #333;
 }
 
-.controls {
-  margin: 15px 0;
-}
-
-.statistics {
-  margin: 15px 0;
-}
-
-.stat {
-  margin-bottom: 5px;
+.active-link {
+  font-weight: bold;
 }
 
 .student-card {
-  border: 1px solid #f8bbd0;
+  border: 1px solid #facc15;
   padding: 10px;
   margin-bottom: 10px;
   width: 250px;
 }
 
-.student-card h3 {
-  color: #c2185b;
-  margin: 0 0 5px 0;
+.badge {
+  margin-left: 8px;
+  font-size: 13px;
 }
 
-.badge {
-  font-size: 13px;
-  margin-left: 8px;
+.details-link {
+  display: block;
+  margin-top: 5px;
+  color: #333;
 }

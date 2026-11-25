@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./pages/Dashboard";
 import Students from "./pages/Students";
 import ExcellentStudents from "./pages/ExcellentStudents";
+import StudentDetails from "./pages/StudentDetails";
+import Users from "./pages/Users";
 import NotFound from "./pages/NotFound";
 import "./App.css";
-import StudentDetails from "./pages/StudentDetails";
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="students" element={<Students />} />
+          <Route path="students/:id" element={<StudentDetails />} />
           <Route path="excellent" element={<ExcellentStudents />} />
+          <Route path="users" element={<Users />} />
         </Route>
         <Route path="*" element={<NotFound />} />
-        <Route path="students/:id" element={<StudentDetails />} />
       </Routes>
     </BrowserRouter>
   );
